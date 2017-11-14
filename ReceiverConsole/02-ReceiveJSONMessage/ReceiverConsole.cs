@@ -25,7 +25,7 @@ namespace WorkingWithMessages.Receiver
             StopReceiving();
         }
 		
-		    private static void CreateQueue()
+	private static void CreateQueue()
         {
             var manager = NamespaceManager.CreateFromConnectionString
 			                    (Settings.ConnectionString);
