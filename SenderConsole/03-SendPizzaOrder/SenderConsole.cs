@@ -36,7 +36,7 @@ namespace WorkingWithMessages.Sender
                 Label = "PizzaOrder"
             };
 
-            // What size is the message?
+            // What size is the message? 188
             Console.WriteLine("Message Size: " + message.Size);
 
             // Send the message...
@@ -47,7 +47,7 @@ namespace WorkingWithMessages.Sender
             Console.WriteLine("Done!");
             client.Close();
 
-            // What size is the message now?
+            // What size is the message now? 255 (Includes Header Size)
             Console.WriteLine("Message size: " + message.Size);
         }       
     }
