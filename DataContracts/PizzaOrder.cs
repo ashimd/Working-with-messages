@@ -14,11 +14,4 @@ namespace WorkingWithMessages.DataContracts
         [DataMember]
         public string Size { get; set; }
     }
-
-    public class PizzaOrderUnserialized
-    {
-        public string CustomerName { get; set; }
-        public string Type { get; set; }
-        public string Size { get; set; }
-    }
 }
