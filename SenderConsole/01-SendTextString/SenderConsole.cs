@@ -30,8 +30,6 @@ namespace WorkingWithMessages.Sender
 
             Console.Write("Sending: ");
 
-            var taskList = new List<Task>();
-
             foreach (var letter in text.ToCharArray())
             {
                 // Create an empty message and set the label.
@@ -47,23 +45,14 @@ namespace WorkingWithMessages.Sender
                 else
                 {
                     // Create a task to send the message
-                    //var sendTask = new Task(() =>
-                    //{
-                    //    client.Send(message);
-                    //    Console.Write(message.Label);
-                    //});
-                    //sendTask.Start();
-                    taskList.Add(client.SendAsync(message).ContinueWith
-                        (t => Console.WriteLine("Sent: " + message.Label)));
+                    var sendTask = new Task(() =>
+                    {
+                        client.Send(message);
+                        Console.Write(message.Label);
+                    });
+                    sendTask.Start();                    
                 }
-            }
-
-            if (!sendSync)
-            {
-                Console.WriteLine("Waiting...");
-                Task.WaitAll(taskList.ToArray());
-                Console.WriteLine("Complete!");
-            }
+            }            
 
             Console.ReadLine();
             Console.WriteLine();
