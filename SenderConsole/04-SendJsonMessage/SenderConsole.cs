@@ -21,9 +21,8 @@ namespace WorkingWithMessages.Sender
                 CustomerName = "Alan",
                 Type = "Kebab",
                 Size = "Extra Large"
-            };
-			
-			SendJsonMessage(order);            
+            };			
+	    SendJsonMessage(order);            
 
             Console.WriteLine("Sender Console - Complete");
             Console.ReadLine();
@@ -56,7 +55,7 @@ namespace WorkingWithMessages.Sender
         }    
     }
 	
-	class PizzaOrder
+    class PizzaOrder
     {
         public string CustomerName { get; set; }
         public string Type { get; set; }
