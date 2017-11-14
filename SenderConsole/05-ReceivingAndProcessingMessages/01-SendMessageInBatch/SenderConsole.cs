@@ -15,7 +15,7 @@ namespace WorkingWithMessages.Sender
             Console.WriteLine("Sender Console - Hit enter");
             Console.ReadLine();
 			
-			      SendPizzaOrderBatch();       
+	    SendPizzaOrderBatch();       
 
             Console.WriteLine("Sender Console - Complete");
             Console.ReadLine();
