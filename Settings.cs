@@ -1,3 +1,4 @@
+﻿
 namespace WorkingWithMessages.Config
 {
     public class Settings
