@@ -70,6 +70,13 @@ namespace WorkingWithMessages.Receiver
             Console.WriteLine("Receiving, hit enter to exit");
             Console.ReadLine();            
         }
+	    
+	private static void CookPizza(PizzaOrder order)
+        {
+            Console.WriteLine("Cooking {0} for {1}.", order.Type, order.CustomerName);
+            Thread.Sleep(5000);
+            Console.WriteLine("     {0} pizza for {1}.", order.Type, order.CustomerName);
+        }
 
         private static void StopReceiving()
         {
