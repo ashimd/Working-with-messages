@@ -19,18 +19,18 @@ namespace WorkingWithMessages.Receiver
 
             CreateQueue();
             ReceiveAndProcessPizzaOrdersUsingOnMessage(1);
-			      ReceiveAndProcessPizzaOrdersUsingOnMessage(5);
-			      ReceiveAndProcessPizzaOrdersUsingOnMessage(100);
+	    ReceiveAndProcessPizzaOrdersUsingOnMessage(5);
+	    ReceiveAndProcessPizzaOrdersUsingOnMessage(100);
             
             Console.WriteLine("Receiving, hit enter to exit.");
             Console.ReadLine();
             StopReceiving();
         }
 		
-		    private static void CreateQueue()
+	private static void CreateQueue()
         {
             var manager = NamespaceManager.CreateFromConnectionString
-			          (Settings.ConnectionString);
+		(Settings.ConnectionString);
 			
             if (!manager.QueueExists(Settings.QueueName))
             {
