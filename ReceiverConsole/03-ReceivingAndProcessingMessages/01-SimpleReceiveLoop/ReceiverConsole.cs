@@ -86,6 +86,13 @@ namespace WorkingWithMessages.Receiver
                 }
             }
         }
+	    
+	private static void CookPizza(PizzaOrder order)
+        {
+            Console.WriteLine("Cooking {0} for {1}.", order.Type, order.CustomerName);
+            Thread.Sleep(5000);
+            Console.WriteLine("     {0} pizza for {1}.", order.Type, order.CustomerName);
+        }
 
         private static void StopReceiving()
         {
